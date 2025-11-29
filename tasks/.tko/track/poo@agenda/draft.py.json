@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-29_21-58-12",
+            "content": "@@ -276,24 +276,25 @@\n e%5D = %5B%5D%0A\n+%0A\n         \n self.fav\n@@ -289,507 +289,5 @@\n     \n-self.favorite = False%0A%0A    def add_fone(self, fone: Fone):%0A        self.fones.append(fone)%0A%0A    def remove_fone(self, index: int):%0A        if 0 %3C= index %3C len(self.fones):%0A            self.fones.pop(index)%0A        else:%0A            print(%22fail: indice de telefone invalido%22)%0A%0A    def matches(self, pattern: str):%0A        if pattern.lower() in self.name.lower():%0A            return True%0A        for f in self.fones:%0A            if pattern.lower() in f.id.lower() or patter.lower() in f.number%0A        %0A%0A\n %0A\n",
+            "lines": "14"
+        },
+        {
+            "label": "2025-11-29_22-07-45",
+            "content": "@@ -779,265 +779,8 @@\n mber\n-.lower():%0A                return True%0A        return False%0A%0A    def__str__(self):%0A        fav = %22in self.favorite else%22%0A        fones_str = %22%22.join(%5Bf%22%5B%7Bi%7D%5D:%7Bfone%7D%22%5D) for i, fone in enumerate(sel, fones)%5D)%0A            return f%22%7Bfav%7D%7Bself.name%7D%22%0A            \n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-29_23-17-53",
+            "content": "@@ -1,112 +1,42 @@\n-Class Fone:%0A    def__init__(self, id: str, number: str):%0A        self.id = id%0A        self.number = number%0A%0A\n+@@ -835,10 +835,217 @@%0A  False%250A%250A%0A+\n     \n@@ -56,685 +56,245 @@\n lf):\n-%0A \n+%250A\n        \n-return f%22%7Bself.id%7D:%7Bself.number%7D%22%0A%0AClass Contact:%0A    def__init__(self, name: str):%0A        self.name = name%0A        self.fones: list%5BFone%5D = %5B%5D%0A        self.favorite = False%0A%0A    def add_fone(self, fone: Fone):%0A        self.fones.append(fone)%0A%0A    def remove_fone(self, index: int):%0A        if 0 %3C= index %3C len(self.fones):%0A            self.fones.pop(index)%0A        else:%0A            print(%22fail: indice de telefone invalido%22)%0A%0A    def matches\n+ fav = %2522in self.favorite else%2522%250A        fones_str = %2522%2522.join(%255Bf%2522%255B%257Bi%257D%255D:%257Bfone%257D%2522%255D) for i, fone in enumerate\n (sel\n-f\n , \n-pattern: str):%0A        if pattern.lower() in self.name.lower():%0A            return True%0A        for f in self.fones:%0A            if pattern.lower() in f.id.lower() or patter.lower() in f.number.lower():%0A\n+fones)%255D)%250A            return f%2522%257Bfav%257D%257Bself.name%257D%2522%250A      \n       \n+%250A\n         \n   re\n@@ -293,42 +293,16 @@\n     \n-  return True%0A        return False%0A%0A%0A\n+%250A%0A %250A%250A\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-29_23-24-43",
+            "content": "@@ -839,443 +839,6 @@\n se%0A%0A\n-    def__str__(self):%0A        fav = %22if self.favorite else%22%0A        fones_str = %22%22.join(%5Bf%5D) for i. fone in enumerate(self.fones)%0A        return f%22%7Bfav%7D%7Bself.name%7D%7Bfones_str%7D%22%0A%0AClass Agenda:%0A    def__init__(self):%0A        self.contacts: dict%5Bstr,  Contact%5D = %7B%7D%0A%0A        def add_contact(self, name: str, fones: list%5BFone%5D):%0A            if name not in self.contacts:%0A                self.contacts%5Bname%5D = Contact(name)%0A%0A                %0A%0A\n %0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-11-29_23-39-07",
+            "content": "Class Fone:\n    def__init__(self, id: str, number: str):\n        self.id = id\n        self.number = number\n\n    def__str__(self):\n        return f\"{self.id}:{self.number}\"\n\nClass Contact:\n    def__init__(self, name: str):\n        self.name = name\n        self.fones: list[Fone] = []\n        self.favorite = False\n\n    def add_fone(self, fone: Fone):\n        self.fones.append(fone)\n\n    def remove_fone(self, index: int):\n        if 0 <= index < len(self.fones):\n            self.fones.pop(index)\n        else:\n            print(\"fail: indice de telefone invalido\")\n\n    def matches(self, pattern: str):\n        if pattern.lower() in self.name.lower():\n            return True\n        for f in self.fones:\n            if pattern.lower() in f.id.lower() or patter.lower() in f.number.lower():\n                return True\n        return False\n\n    def__str__(self):\n        fav = \"if self.favorite else\"\n        fones_str = \"\".join([f]) for i. fone in enumerate(self.fones)\n        return f\"{fav}{self.name}{fones_str}\"\n\nClass Agenda:\n    def__init__(self):\n        self.contacts: dict[str,  Contact] = {}\n\n        def add_contact(self, name: str, fones: list[Fone]):\n            if name not in self.contacts:\n                self.contacts[name] = Contact(name)\n\n                \n\n\n\n",
+            "lines": "48"
+        }
+    ]
+}
