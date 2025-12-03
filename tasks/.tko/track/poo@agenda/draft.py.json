@@ -22,8 +22,58 @@
         },
         {
             "label": "2025-11-29_23-39-07",
-            "content": "Class Fone:\n    def__init__(self, id: str, number: str):\n        self.id = id\n        self.number = number\n\n    def__str__(self):\n        return f\"{self.id}:{self.number}\"\n\nClass Contact:\n    def__init__(self, name: str):\n        self.name = name\n        self.fones: list[Fone] = []\n        self.favorite = False\n\n    def add_fone(self, fone: Fone):\n        self.fones.append(fone)\n\n    def remove_fone(self, index: int):\n        if 0 <= index < len(self.fones):\n            self.fones.pop(index)\n        else:\n            print(\"fail: indice de telefone invalido\")\n\n    def matches(self, pattern: str):\n        if pattern.lower() in self.name.lower():\n            return True\n        for f in self.fones:\n            if pattern.lower() in f.id.lower() or patter.lower() in f.number.lower():\n                return True\n        return False\n\n    def__str__(self):\n        fav = \"if self.favorite else\"\n        fones_str = \"\".join([f]) for i. fone in enumerate(self.fones)\n        return f\"{fav}{self.name}{fones_str}\"\n\nClass Agenda:\n    def__init__(self):\n        self.contacts: dict[str,  Contact] = {}\n\n        def add_contact(self, name: str, fones: list[Fone]):\n            if name not in self.contacts:\n                self.contacts[name] = Contact(name)\n\n                \n\n\n\n",
+            "content": "@@ -1016,19 +1016,35 @@\n %7D%22%0A%0A\n+Class Agenda:%0A\n     de\n+f\n __\n-str\n+init\n __(s\n@@ -1061,172 +1061,150 @@\n     \n-fav = %22if self.favorite else%22%0A        fones_str = %22%22.join(%5Bf%5D) for i. fone in enumerate(self.fones)%0A        return f%22%7Bfav%7D%7Bself.name%7D%7Bfones_str%7D%22%0A%0A    Class C\n+self.contacts: dict%5Bstr,  Contact%5D = %7B%7D%0A%0A        def add_contact(self, name: str, fones: list%5BFone%5D):%0A            if name not in self.c\n ontact\n+s\n :%0A  \n@@ -1213,23 +1213,51 @@\n     \n+    \n-def__init__%0A%0A%0A%0A\n+    self.contacts%5Bname%5D = Contact(name)\n %0A%0A  \n",
             "lines": "48"
+        },
+        {
+            "label": "2025-12-02_19-59-26",
+            "content": "@@ -1192,195 +1192,25 @@\n %7D%22%0A%0A\n-Class Agenda:%0A    def__init__(self):%0A        self.contacts: dict%5Bstr,  Contact%5D = %7B%7D%0A%0A        def add_contact(self, name: str, fones: list%5BFone%5D):%0A            if name not in self.c\n+    Class C\n ontact\n-s\n :%0A  \n@@ -1219,304 +1219,21 @@\n     \n-        self.contacts%5Bname%5D = Contact(name)%0A%0AClass Agenda:%0A    def__init__(self):%0A        self.contacts: dict%5Bstr, Contact%5D = %7B%7D%0A        def add_contact(self, name: str, fones: list%5BFone%5D):%0A            if name not in self.contacts:%0A                self.contacts%5Bname%5D = Contact(name)%0A            \n+def__init__%0A%0A\n %0A%0A%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-12-02_20-12-26",
+            "content": "@@ -1669,18 +1669,16 @@\n t(name)%0A\n-%0A%0A\n         \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-12-03_08-28-35",
+            "content": "@@ -1674,69 +1674,8 @@\n e)%0A%0A\n-Class Agenda:%0A    def__init__(self):%0A    self.contacts: dict \n %0A   \n",
+            "lines": "65"
+        },
+        {
+            "label": "2025-12-03_08-31-44",
+            "content": "@@ -1734,169 +1734,9 @@\n dict\n-%5Bstr, Contact%5D = %7B%7D%0A    def add_contact(self, name: str, fones: list%5BFone%5D):%0A        if name not in sekf.contacs:%0A            self.contacts%5Bname%5D = Contact(name)\n+ \n %0A   \n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-12-03_08-35-46",
+            "content": "@@ -1434,93 +1434,469 @@\n e)%0A%0A\n-def matches(self, pattern: str):%0A    if pattern pattern lower()\n+Class Agenda:%0A    def__init__(self):%0A        self.contacts: dict%5Bstr, Contact%5D = %7B%7D%0A        def add_contact(self, name: str, fones: list%5BFone%5D):%0A            if name not in self.contacts:%0A                self.contacts%5Bname%5D = Contact(name)%0A%0AClass Agenda:%0A    def__init__(self):%0A    self.contacts: dict%5Bstr, Contact%5D = %7B%7D%0A    def add_contact(self, name: str, fones: list%5BFone%5D):%0A        if name not\n  in se\n-lf.name.lower():\n+kf.contacs:%0A            self.contacts%5Bname%5D = Contact(name)\n %0A   \n@@ -1900,17 +1900,20 @@\n         \n-%0A\n+    \n %0A%0A%0A%0A    \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-12-03_08-40-49",
+            "content": "@@ -1012,16 +1012,532 @@\n _str%7D%22%0A%0A\n+    de__str__(self):%0A        fav = %22if self.favorite else%22%0A        fones_str = %22%22.join(%5Bf%5D) for i. fone in enumerate(self.fones)%0A        return f%22%7Bfav%7D%7Bself.name%7D%7Bfones_str%7D%22%0A%0AClass Agenda:%0A    def__init__(self):%0A        self.contacts: dict%5Bstr,  Contact%5D = %7B%7D%0A%0A        def add_contact(self, name: str, fones: list%5BFone%5D):%0A            if name not in self.contacts:%0A                self.contacts%5Bname%5D = Contact(name)%0A%0Adef matches(self, pattern: str):%0A    if pattern pattern lower() in self.name.lower():%0A        %0A%0A%0A%0A\n %0A       \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-12-03_08-42-59",
+            "content": "@@ -1015,189 +1015,8 @@\n r%7D%22%0A\n-    %0A    def__str__(self):%0A        fav = %22if self.favorite else%22%0A        fones_str = %22%22.join(%5Bf%5D) for i. fone in enumerate(self.fones)%0A        return f%22%7Bfav%7D%7Bself.name%7D%7Bfones_str%7D%22%0A\n %0A%0A  \n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-12-03_08-56-03",
+            "content": "@@ -1198,209 +1198,8 @@\n %22%0A%0A%0A\n-    def __str__(self):%0A        fav = %22%E2%9D%A4%EF%B8%8F %22 if self.favorite else %22%22%0A        fones_str = %22 %22.join(%5Bf%22%5B%7Bi%7D:%7Bfone%7D%5D%22 for i, fone in enumerate(self.fones)%5D)%0A        return f%22%7Bfav%7D%7Bself.name%7D %7Bfones_str%7D%22%0A%0A\n     \n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-12-03_09-08-36",
+            "content": "@@ -1391,25 +1391,24 @@\n ones_str%7D%22%0A%0A\n-%0A\n             \n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-12-03_09-33-11",
+            "content": "Class Fone:\n    def__init__(self, id: str, number: str):\n        self.id = id\n        self.number = number\n\n    def__str__(self):\n        return f\"{self.id}:{self.number}\"\n\nClass Contact:\n    def__init__(self, name: str):\n        self.name = name\n        self.fones: list[Fone] = []\n        self.favorite = False\n\n    def add_fone(self, fone: Fone):\n        self.fones.append(fone)\n\n    def remove_fone(self, index: int):\n        if 0 <= index < len(self.fones):\n            self.fones.pop(index)\n        else:\n            print(\"fail: indice de telefone invalido\")\n\n    def matches(self, pattern: str):\n        if pattern.lower() in self.name.lower():\n            return True\n        for f in self.fones:\n            if pattern.lower() in f.id.lower() or patter.lower() in f.number.lower():\n                return True\n        return False\n\n    def__str__(self):\n        fav = \"if self.favorite else\"\n        fones_str = \"\".join([f]) for i. fone in enumerate(self.fones)\n        return f\"{fav}{self.name}{fones_str}\"\n    \n    def__str__(self):\n        fav = \"if self.favorite else\"\n        fones_str = \"\".join([f]) for i. fone in enumerate(self.fones)\n        return f\"{fav}{self.name}{fones_str}\"\n\n\n    def __str__(self):\n        fav = \"\u2764\ufe0f \" if self.favorite else \"\"\n        fones_str = \" \".join([f\"[{i}:{fone}]\" for i, fone in enumerate(self.fones)])\n        return f\"{fav}{self.name} {fones_str}\"\n\n\n                \n\n\n\n",
+            "lines": "52"
         }
     ]
 }

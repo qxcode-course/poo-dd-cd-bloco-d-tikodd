@@ -33,14 +33,18 @@ Class Contact:
         fav = "if self.favorite else"
         fones_str = "".join([f]) for i. fone in enumerate(self.fones)
         return f"{fav}{self.name}{fones_str}"
+    
+    def__str__(self):
+        fav = "if self.favorite else"
+        fones_str = "".join([f]) for i. fone in enumerate(self.fones)
+        return f"{fav}{self.name}{fones_str}"
 
-Class Agenda:
-    def__init__(self):
-        self.contacts: dict[str,  Contact] = {}
 
-        def add_contact(self, name: str, fones: list[Fone]):
-            if name not in self.contacts:
-                self.contacts[name] = Contact(name)
+    def __str__(self):
+        fav = "❤️ " if self.favorite else ""
+        fones_str = " ".join([f"[{i}:{fone}]" for i, fone in enumerate(self.fones)])
+        return f"{fav}{self.name} {fones_str}"
+
 
                 
 
