@@ -44,9 +44,3 @@ Class Contact:
         fav = "❤️ " if self.favorite else ""
         fones_str = " ".join([f"[{i}:{fone}]" for i, fone in enumerate(self.fones)])
         return f"{fav}{self.name} {fones_str}"
-
-
-                
-
-
-
