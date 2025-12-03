@@ -28,19 +28,45 @@ Class Contact:
             if pattern.lower() in f.id.lower() or patter.lower() in f.number.lower():
                 return True
         return False
+ Class Fone:
+    def __init__(self. id: str =",number: str ="):
+        self.__id:str = id;
+        self.__number: str = number;
 
-    def__str__(self):
-        fav = "if self.favorite else"
-        fones_str = "".join([f]) for i. fone in enumerate(self.fones)
-        return f"{fav}{self.name}{fones_str}"
-    
-    def__str__(self):
-        fav = "if self.favorite else"
-        fones_str = "".join([f]) for i. fone in enumerate(self.fones)
-        return f"{fav}{self.name}{fones_str}"
+def __str__(Self) -> str:
+    return f"{self.getld()}:{self.getNumber()}";
 
+def getld(self) -> str:
+    return self.__id;
 
-    def __str__(self):
-        fav = "❤️ " if self.favorite else ""
-        fones_str = " ".join([f"[{i}:{fone}]" for i, fone in enumerate(self.fones)])
-        return f"{fav}{self.name} {fones_str}"
+def getNumber(self) -> str:
+    return self.__id;
+
+def getNumber(self) -> str:
+    return self.number;
+
+def isValid(self):
+    allowedCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9","(,)"];
+    fone = list(self.getNumber());
+
+    for char in fone:
+        if char not in allowedCharacters: 
+
+fdfsgsdf
+sdfsdsdffsd
+lkljnnjhjnhqwabcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+abcdefghijklmnopqrstuvwxyz
+jhbjhkjhjj
+kikikkkhhnbhnhjjhnbhuoih[[0´999999095636.+.,kmnhb
+kikikkkhhnbhnhjjhnbhuoih
+]]
+jhjjhjkkJDKSJKJK
+IJFSFJDF
+SJDJASKJD
+askdjaskdj
+kjsdasiiwofhs
+sdjhsjjhaswiuasdiasjdajs
+aajshdahsjahajh
+asdhasdaksjkj
+
